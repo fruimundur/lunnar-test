@@ -11,11 +11,11 @@ const Top:FC<TopProps> = ({name, gender, birthyear}) => {
 
     return(
         <div className='flex flex-col items-center text-white'>
-            <h1 className="text-base mt-4 mb-6 font-bold text-center">
+            <h1 className="text-base mt-4 mb-6 font-semibold text-center">
              {name}
             </h1>
             <div><CharacterPic/></div>
-            <div className="text-sm capitalize mt-6">{gender} | {birthyear}</div>
+            <div className="text-sm capitalize mt-6 font-light">{gender} | {birthyear}</div>
         </div>
     )
 }

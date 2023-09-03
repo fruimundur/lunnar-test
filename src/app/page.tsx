@@ -22,7 +22,7 @@ const Home = async () => {
  
   return (
     <div className="text-white mb-28">
-      <h1 className="font-bold text-base ml-8 mt-4 mb-6">Characters in StarWars</h1>
+      <h1 className="font-semibold text-base ml-8 mt-4 mb-7">Characters in StarWars</h1>
       <div>
       {characters.results.map(({name, gender, birth_year}) => (
         <Link href={`/${name}`}><CharacterBox name={name} gender={gender} birthyear={birth_year}/></Link>
