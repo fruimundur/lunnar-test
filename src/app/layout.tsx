@@ -25,7 +25,7 @@ export default function RootLayout({
       <head>
         <link rel='icon' href='/favicon.ico'/>
       </head>
-      <body className={`bg-gradient-to-b from-[#16141c] to-[#2c1c54] ${sans.variable} font-sans font-normal text-xs`}>
+      <body className={`bg-gradient-to-b from-[#16141c] to-[#2a1b50] ${sans.variable} font-sans font-normal text-xs`}>
         <Header/>
           {children}
         <Footer/>

@@ -16,7 +16,7 @@ const CharacterBox:FC<CharacterBoxProps> = ({name, gender, birthyear}) => {
                 <div>
                     <CharacterPic/>
                 </div>
-                <div className="ml-6 w-full">
+                <div className="ml-6 mb-1 w-full">
                     <p className="font-semibold text-base mb-3">{name}</p>
                     <div className="flex justify-between capitalize">
                         <div className="text-sm font-light">{gender} | {birthyear}</div>
