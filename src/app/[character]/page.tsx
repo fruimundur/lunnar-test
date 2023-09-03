@@ -3,6 +3,7 @@ import Top from '@/components/detailed-character/top';
 import Planets from '@/components/detailed-character/planets';
 import Starships from '@/components/detailed-character/starships';
 
+
 const getCharacters = async () => {
     const res = await fetch('https://swapi.dev/api/people/');
   
@@ -79,6 +80,7 @@ interface pageProps{
 
 const CharacterPage: FC<pageProps> = async ({params}) => {
 
+// Her heinti eg tað character objektið, sum hoyrir til tann karakterin brúkarin hevur trýst á
     const charactersObject = await getCharacters();
     const characters = charactersObject.results
     const characterName = params.character.replace(/%20/g, ' ')
@@ -87,6 +89,7 @@ const CharacterPage: FC<pageProps> = async ({params}) => {
     );
 
 
+// Her heinti eg planet data, sum hoyrir til tann karakterin brúkarin hevur trýst á 
     const planetObjects = await getPlanets();
 
     let planet: any[] = [];
@@ -101,6 +104,7 @@ const CharacterPage: FC<pageProps> = async ({params}) => {
     }
 
 
+// Her heinti eg starship data, sum hoyrir til tann karakterin brúkarin hevur trýst á
     const starshipObjects = await getStarships();
 
     let unknownStarships = 
@@ -123,11 +127,13 @@ const CharacterPage: FC<pageProps> = async ({params}) => {
         starship = [starshipObjects[4]]
     } 
 
+
     interface Character {
         name: string;
         gender: string;
         birth_year: string;
     }
+
 
     return(
         <div>
