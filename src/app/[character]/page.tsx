@@ -123,10 +123,15 @@ const CharacterPage: FC<pageProps> = async ({params}) => {
         starship = [starshipObjects[4]]
     } 
 
+    interface Character {
+        name: string;
+        gender: string;
+        birth_year: string;
+    }
 
     return(
         <div>
-            {selectedCharacter.map(({name, gender, birth_year}) => (
+            {selectedCharacter.map(({name, gender, birth_year} : Character) => (
                 <Top name={name} gender={gender} birthyear={birth_year} />
             ))}
             {planet.map(({name, rotation_period, population}) => (

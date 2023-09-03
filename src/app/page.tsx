@@ -11,9 +11,14 @@ const getCharacters = async () => {
   return res.json();
 }
 
+interface Character {
+  name: string;
+  gender: string;
+  birth_year: string;
+}
 
 const Home = async () => {
-  const characters = await getCharacters();
+  const characters: { results: Character[] } = await getCharacters();
  
   return (
     <div className="text-white mb-28">
