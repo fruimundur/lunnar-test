@@ -82,7 +82,7 @@ const CharacterPage: FC<pageProps> = async ({params}) => {
     const charactersObject = await getCharacters();
     const characters = charactersObject.results
     const characterName = params.character.replace(/%20/g, ' ')
-    const selectedCharacter = characters.filter((item) =>
+    const selectedCharacter = characters.filter((item: { name: string; }) =>
         item.name===characterName
     );
 
