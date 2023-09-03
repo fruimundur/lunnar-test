@@ -89,7 +89,7 @@ const CharacterPage: FC<pageProps> = async ({params}) => {
 
     const planetObjects = await getPlanets();
 
-    let planet;
+    let planet: any[] = [];
     if (selectedCharacter[0].homeworld === "https://swapi.dev/api/planets/1/") {
         planet = [planetObjects[0]]
     } else if (selectedCharacter[0].homeworld === "https://swapi.dev/api/planets/8/") {
